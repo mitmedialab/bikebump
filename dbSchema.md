@@ -8,77 +8,57 @@ things in mind
 * [] elements will be an id or number 
 
 ```
-/users
+/users *
   /[uid]:string
     name:string
     uid:string
     avatar:string(url)
 
-/fences
-  /[fenceId]:string
-    fenceId:string
+/dings *
+  /[dingId]:string
+    dingId:string
+    roadId:number // closestRoad
     raidus:number // in meters
     /coordinate
       lat:number
       lng:number
-    /questions
-      /[questionId]
-        /[uid]:string
-          value:number
-    /dings
-      /[dingId]
+    /timestamps
+      /[timestamp]:number
         timestamp:number
         value:number
         uid:string
 
-/userRoads
-  /[uid]:string
-    /[roadId]
-      /[fenceId]:string
-        fenceId:string
-        radius:number
-        /coordinate
-          lat:number
-          lng:number
-        /dings
-          /[dingId]
-            timestamp
-            value:number
-            uid:string
-
-/roads
+/roads *  // converted from OSM xml
   /[roadId]:number
     roadId:number
     name:string
     kind:string
+    highway:string
+    motor_cycle:string
+    bicycle:string
+    cycleway:string
+    foot:string
+    /dings
+      /[dingId]:string
+        /coordinate
+          lat:number
+          lng:number
     /geometry
       type:string
       /coordinates
         /[coordinateId]:number
           lat:number
           lng:number
-    /fences
-      /[fenceId]:string
-        fenceId:string
-        raidus:number
-        /coordinate
-          lat:number
-          lng:number
-        /dings
-          /[dingId]:number
-            timestamp:number
-            value:number
-            uid:string
-
+        
 /commutes
   /[commuteId]:string
-    /commuteId:string
-    /breadcrums
-      /[breadcrumId]:string
-        breadcurmId:string
+    commuteId:string
+    uid:string
+    /timestamps
+      /[timestamp]:number
+        timestamp:number
         lat:number
         lng:number
-        timestamp:number
 
 /userCommutes
   /[uid]:string
@@ -91,19 +71,11 @@ things in mind
           lng:number
           timestamp:number
 
-/soundClips
+/soundClips *
   /[soundClipId]:string
     [url]:string
     timestamp:number
     [dingId] // if associated with ding
-
-/questions
-  /[questionId]:string
-    questionId:string
-    text:string
-    /choices
-      value:number
-      text:string
 
 
 ```
