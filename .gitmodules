@@ -7,3 +7,6 @@
 [submodule "android"]
 	path = android
 	url = https://github.com/kentanaka000/bikebumpandroid.git
+[submodule "server"]
+	path = server
+	url = https://github.com/yasushisakai/bikebump-server.git
