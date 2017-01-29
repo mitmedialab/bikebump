@@ -1,12 +1,16 @@
 [submodule "web"]
 	path = web
 	url = https://github.com/yasushisakai/bikebump-web.git
+	branch = master
 [submodule "ios"]
 	path = ios
 	url = https://github.com/ChristopherSweeney/Bike-Bump
+	branch = master
 [submodule "android"]
 	path = android
 	url = https://github.com/kentanaka000/bikebumpandroid.git
+	branch = master
 [submodule "server"]
 	path = server
 	url = https://github.com/yasushisakai/bikebump-server.git
+	branch = master
