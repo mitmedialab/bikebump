@@ -14,3 +14,6 @@
 	path = server
 	url = https://github.com/yasushisakai/bikebump-server.git
 	branch = master
+[submodule "Bike-Bump-Deep-Learning"]
+	path = Bike-Bump-Deep-Learning
+	url = https://github.com/ChristopherSweeney/Bike-Bump-Deep-Learning.git
