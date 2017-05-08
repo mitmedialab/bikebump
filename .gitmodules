@@ -17,3 +17,6 @@
 [submodule "Bike-Bump-Deep-Learning"]
 	path = Bike-Bump-Deep-Learning
 	url = https://github.com/ChristopherSweeney/Bike-Bump-Deep-Learning.git
+[submodule "misc"]
+	path = misc
+	url = https://github.com/yasushisakai/bikebump-misc.git
